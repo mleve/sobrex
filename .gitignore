@@ -1,0 +1,4 @@
+VENV/
+db.sqlite3
+*.pyc
+

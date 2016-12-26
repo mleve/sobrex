@@ -1,0 +1,563 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cate",
+				"category"
+			],
+			[
+				"catego",
+				"categories"
+			],
+			[
+				"tra",
+				"translation"
+			],
+			[
+				"sub",
+				"subscription"
+			],
+			[
+				"ch",
+				"check_payload"
+			],
+			[
+				"device",
+				"device_invitter"
+			],
+			[
+				"referra",
+				"referral_code"
+			],
+			[
+				"devi",
+				"device"
+			],
+			[
+				"sta",
+				"start_with"
+			],
+			[
+				"promo",
+				"promotional_code"
+			],
+			[
+				"refe",
+				"referral_code"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"PROGRA",
+				"PROGRAM_DIR"
+			],
+			[
+				"ca",
+				"campaigns"
+			],
+			[
+				"coun",
+				"country"
+			],
+			[
+				"cou",
+				"country"
+			],
+			[
+				"peo",
+				"people_project"
+			],
+			[
+				"ides",
+				"idesString"
+			],
+			[
+				"lir",
+				"lircay_id"
+			],
+			[
+				"li",
+				"lircay_project"
+			],
+			[
+				"Peo",
+				"PeopleProject"
+			],
+			[
+				"pe",
+				"people_project"
+			],
+			[
+				"peopl",
+				"people_project"
+			],
+			[
+				"cond",
+				"condonation_params"
+			],
+			[
+				"dev",
+				"device"
+			],
+			[
+				"cu",
+				"current_person"
+			],
+			[
+				"k",
+				"key_to_find"
+			],
+			[
+				"co",
+				"condonation"
+			],
+			[
+				"con",
+				"condonation_params"
+			],
+			[
+				"req",
+				"require"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 75.0,
+		"last_filter": "install package",
+		"selected_items":
+		[
+			[
+				"install package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 509.0,
+		"history":
+		[
+			"runserver",
+			"a + b",
+			"b = 2",
+			"a= 1",
+			"manage.py",
+			"cls",
+			"clear",
+			"manage.py runserver",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/mario/sobrex"
+	],
+	"file_history":
+	[
+		"/home/mario/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/home/mario/solunova/solunova-project/solunova/dashboard/templates/default/menu.html",
+		"/home/mario/solunova/solunova-project/solunova/dashboard/urls.py",
+		"/home/mario/solunova/solunova-project/solunova/dashboard/views/categories.py",
+		"/home/mario/solunova/solunova-project/solunova/dashboard/templates/categories/add.html",
+		"/home/mario/solunova/solunova-project/solunova/dashboard/views/views.py",
+		"/home/mario/solunova/solunova-project/solunova/dashboard/views/companies.py",
+		"/home/mario/solunova/solunova-project/solunova/dashboard/templates/categories/list.html",
+		"/home/mario/solunova/solunova-project/solunova/dashboard/templates/companies/list.html",
+		"/home/mario/solunova/solunova-project/solunova/solunova/settings.py",
+		"/home/mario/translations.sql",
+		"/home/mario/railsProyects/egreen.backend/db/schema.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20161108175103_change_title_text_column_types.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/companies_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/translations_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20161108174447_create_translations.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160915202910_app_purchases.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/translation.rb",
+		"/home/mario/solunova/MIT_txt_outputs/100_output.txt",
+		"/home/mario/solunova/mit_to_android_ecg/100_converted.csv",
+		"/home/mario/Downloads/Telegram Desktop/arritmia_bloq_AV2.m",
+		"/home/mario/solunova/mit_to_android_ecg/207_converted.csv",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/app_subscriptions_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/app_subscription.rb",
+		"/home/mario/railsProyects/egreen.backend/lib/tasks/app_statistics.rake",
+		"/home/mario/railsProyects/egreen.backend/app/mailers/backoffice_mailer.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/app_purchases_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/app_purchase.rb",
+		"/home/mario/railsProyects/egreen.backend/app/helpers/firebase_helper.rb",
+		"/home/mario/solunova/Resampled/100m_resampled.mat",
+		"/home/mario/solunova/deteccion_cardiopatias/MAX/testing/datos/generated_data/ecg_0/ECG.txt",
+		"/home/mario/solunova/Resampled/Anotations/100_pos_R.mat",
+		"/home/mario/Documents/ecgChunks/ecg_1475804636920.csv",
+		"/home/mario/Documents/ecgChunks/ecg_1475803241417.csv",
+		"/home/mario/Documents/ecgChunks/ecg_1475804624920.csv",
+		"/home/mario/Documents/ecgChunks/ecg_1475806128053.csv",
+		"/home/mario/Documents/ecgChunks/ecg_1475806020053.csv",
+		"/home/mario/Documents/ecgChunks_mario/ecg_1475806020053.csv",
+		"/home/mario/Documents/ecgChunks_mario/ecg_1475806128053.csv",
+		"/home/mario/Documents/ecgChunks/ecg_1475803796988.csv",
+		"/home/mario/Documents/ecgChunks/ecg_1475803808988.csv",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160929142359_create_app_subscriptions.rb",
+		"/home/mario/railsProyects/egreen.backend/config/routes.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/url_caches_controller.rb",
+		"/home/mario/solunova/deteccion_cardiopatias/JETRO/Deteccion de arritmias/arritmia_bloq_rama2.m",
+		"/home/mario/solunova/deteccion_cardiopatias/arritmia_ancho_QRS.m",
+		"/home/mario/solunova/deteccion_cardiopatias/arritmia_bloq_AV.m",
+		"/home/mario/solunova/deteccion_cardiopatias/det_R_hitoe.m",
+		"/home/mario/solunova/deteccion_cardiopatias/arritmia_extrasist.m",
+		"/home/mario/solunova/deteccion_cardiopatias/arritmia_bradi_taqui.m",
+		"/home/mario/solunova/deteccion_cardiopatias/arritmia_reporte_hitoe.m",
+		"/home/mario/solunova/deteccion_cardiopatias/det_R.m",
+		"/home/mario/solunova/deteccion_cardiopatias/arritmia_bloq_rama2.m",
+		"/home/mario/solunova/deteccion_cardiopatias/arritmia_bloq_rama.m",
+		"/home/mario/solunova/deteccion_cardiopatias/det_P_filtro.m",
+		"/home/mario/solunova/deteccion_cardiopatias/det_P_filtro2.m",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160811155950_add_carrier_to_devices.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/devices_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/people_projects_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/campaigns_controller.rb",
+		"/home/mario/ecg_samples_utilities/AcquisitionConsistencyValidation/main.py",
+		"/home/mario/Desktop/duplicated_data/Generated_Report.txt",
+		"/home/mario/railsProyects/egreen.backend/app/views/people_projects/show.json.jbuilder",
+		"/home/mario/railsProyects/egreen.backend/app/models/people_project.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/device.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/ads_compensations_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/promotional_codes_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/promotional_code.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/ad_compensation.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/compensation.rb",
+		"/media/mario/3c72ae4d-0183-476f-9532-248e62a7ced3/home/familia/openbravopos.properties",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160726120020_add_firebase_token_to_devices.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/consume.rb",
+		"/media/mario/3c72ae4d-0183-476f-9532-248e62a7ced3/home/familia/openbravopos-2.30.2/configure.sh",
+		"/media/mario/3c72ae4d-0183-476f-9532-248e62a7ced3/home/familia/openbravopos-2.30.2/configure.bat",
+		"/home/mario/railsProyects/egreen.backend/app/models/campaign.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/campaign_action.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160622135750_create_people_projects.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160727164620_create_table_promotional_codes.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20151215132635_create_ads_compensations.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/person.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160630093348_add_countries_to_people_projects.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160706132645_add_referrer_to_people.rb",
+		"/home/mario/SweetHome3D-5.2/SweetHome3D",
+		"/home/mario/Documents/SweetHome3Dx86/SweetHome3D",
+		"/home/mario/railsProyects/egreen.backend/app/models/tip.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/people_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/compensations_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/app/views/people_projects/default.json.jbuilder",
+		"/home/mario/railsProyects/egreen.backend/app/views/people_projects/index.json.jbuilder",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160628190932_add_countries_to_campaigns.rb",
+		"/home/mario/railsProyects/egreen.backend/lib/tasks/calculate_totals.rake",
+		"/home/mario/railsProyects/egreen.backend/app/models/domain_total.rb",
+		"/home/mario/railsProyects/egreen.backend/app/views/companies/index.json.jbuilder",
+		"/home/mario/railsProyects/egreen.backend/app/models/project.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160622185821_add_project_to_ads_compensations.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160622190617_add_projects_to_compensations.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20151110182251_add_device_to_compensations.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/company.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/domains_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20151110181309_remove_person_from_compensation.rb",
+		"/home/mario/railsProyects/egreen.backend/app/controllers/company_compensations_controller.rb",
+		"/home/mario/railsProyects/egreen.backend/app/models/company_compensation.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20150528173613_add_photo_background_to_campaigns.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20140402202203_create_consumes.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20150528185949_create_campaign_actions.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20150406182807_create_projects.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20140402194113_create_devices.rb",
+		"/home/mario/railsProyects/egreen.backend/app/views/people/show_authenticated.json.jbuilder",
+		"/home/mario/comasur/www/index-green.html",
+		"/home/mario/railsProyects/egreen.backend/app/models/status.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160517131045_add_type_to_ad_compensations.rb",
+		"/home/mario/railsProyects/egreen.backend/config/database.yml",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160512144145_add_info_to_devices.rb",
+		"/home/mario/railsProyects/egreen.backend/db/migrate/20160516133557_add_so_to_devices.rb",
+		"/home/mario/railsProyects/egreen.backend/config/deploy.rb",
+		"/home/mario/egreen.backend/app/controllers/application_controller.rb",
+		"/home/mario/egreen.backend/bin/rails",
+		"/home/mario/egreen_backup10_5.sql"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"{\n",
+			"}\n",
+			"\n    url(r'^categories/add$', categories.add, name='categories_add'),",
+			", ",
+			"\n    @tip.t_title = Translation.translate(@tip.t_title,\"en\")",
+			"translation",
+			"\n  \tadd_column :tips, :t_title, :references: :translation, index: true",
+			"change_column :tips, :title, references: :translations",
+			"translations",
+			"\n    change_column :tips, :title, references: :",
+			"translations",
+			"purchase",
+			"Purchase",
+			"people_project",
+			"valid",
+			"integer",
+			"true",
+			"s",
+			"people_projec",
+			"people_project",
+			"project",
+			"people",
+			"measure",
+			"goal_description",
+			"title",
+			"]\n",
+			"padding",
+			"\">\n",
+			"\"\" ",
+			"full_report",
+			"'\n",
+			")\n",
+			"registered",
+			"\")\n",
+			"egreen.backend",
+			">\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"subscription",
+			"Subscription",
+			"egreen_backend"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "sobrex.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"back",
+				"app/mailers/backoffice_mailer.rb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"campa",
+				"app/controllers/campaigns_controller.rb"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"peo",
+				"app/models/people_project.rb"
+			],
+			[
+				"people",
+				"app/controllers/people_projects_controller.rb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"ad",
+				"app/models/ad_compensation.rb"
+			],
+			[
+				"compensation",
+				"app/models/compensation.rb"
+			],
+			[
+				"promoti",
+				"app/models/promotional_code.rb"
+			],
+			[
+				"campaig",
+				"app/models/campaign_action.rb"
+			],
+			[
+				"devices_",
+				"app/controllers/devices_controller.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"campag",
+				"app/controllers/campaigns_controller.rb"
+			],
+			[
+				"device",
+				"app/models/device.rb"
+			],
+			[
+				"per",
+				"app/models/person.rb"
+			],
+			[
+				"tip",
+				"app/models/tip.rb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"peop",
+				"app/models/people_project.rb"
+			],
+			[
+				"sch",
+				"db/schema.rb"
+			],
+			[
+				"project",
+				"app/models/project.rb"
+			],
+			[
+				"sc",
+				"db/schema.rb"
+			],
+			[
+				"pers",
+				"app/models/person.rb"
+			],
+			[
+				"peopl",
+				"app/controllers/people_controller.rb"
+			],
+			[
+				"ro",
+				"config/routes.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 543.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
