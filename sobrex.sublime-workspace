@@ -4,6 +4,114 @@
 		"selected_items":
 		[
 			[
+				"aDR",
+				"Address\timport"
+			],
+			[
+				"cl",
+				"client_id\tstatement"
+			],
+			[
+				"c",
+				"client_id"
+			],
+			[
+				"ad",
+				"address"
+			],
+			[
+				"a",
+				"address"
+			],
+			[
+				"data",
+				"data_views"
+			],
+			[
+				"add",
+				"address"
+			],
+			[
+				"co",
+				"col-md-8"
+			],
+			[
+				"col",
+				"col-xs-12"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"form",
+				"form-group"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"s",
+				"save"
+			],
+			[
+				"te",
+				"test\tmodule"
+			],
+			[
+				"FO",
+				"ForeignKey\tclass"
+			],
+			[
+				"Cas",
+				"CASCADE\tfunction"
+			],
+			[
+				"thr",
+				"through_fields\tparam"
+			],
+			[
+				"Man",
+				"ManyToManyField\tclass"
+			],
+			[
+				"Date",
+				"DateTimeField\tclass"
+			],
+			[
+				"S",
+				"SET_NULL\tfunction"
+			],
+			[
+				"on",
+				"on_delete\tparam"
+			],
+			[
+				"auto_n",
+				"auto_now_add\tparam"
+			],
+			[
+				"Da",
+				"DateTimeField\tclass"
+			],
+			[
+				"max",
+				"max_length"
+			],
+			[
+				"C",
+				"CharField\tclass"
+			],
+			[
+				"col-",
+				"col-sm-6"
+			],
+			[
+				"Htt",
+				"HttpResponse\tclass"
+			],
+			[
 				"cate",
 				"category"
 			],
@@ -112,10 +220,6 @@
 				"key_to_find"
 			],
 			[
-				"co",
-				"condonation"
-			],
-			[
 				"con",
 				"condonation_params"
 			],
@@ -128,34 +232,108 @@
 	"buffers":
 	[
 		{
-			"file": "sobrex.sublime-project",
-			"settings":
-			{
-				"buffer_size": 384,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "sobrex/settings.py",
 			"settings":
 			{
-				"buffer_size": 3096,
+				"buffer_size": 3355,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/mario/Documents/intensify template/index.html",
+			"file": "app/admin.py",
 			"settings":
 			{
-				"buffer_size": 4722,
-				"line_ending": "Windows"
+				"buffer_size": 127,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/mario/Documents/intensify template/assets/css/main.css",
+			"file": "app/models.py",
 			"settings":
 			{
-				"buffer_size": 51823,
+				"buffer_size": 2163,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/test_models.py",
+			"settings":
+			{
+				"buffer_size": 592,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/templates/app/index.html",
+			"settings":
+			{
+				"buffer_size": 21160,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/templates/app/base.html",
+			"settings":
+			{
+				"buffer_size": 5362,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views.py",
+			"settings":
+			{
+				"buffer_size": 293,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/templates/app/dorder/add.html",
+			"settings":
+			{
+				"buffer_size": 4048,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sobrex/__init__.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/urls.py",
+			"settings":
+			{
+				"buffer_size": 272,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/data_views.py",
+			"settings":
+			{
+				"buffer_size": 473,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sobrex/urls.py",
+			"settings":
+			{
+				"buffer_size": 861,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -206,10 +384,34 @@
 	},
 	"expanded_folders":
 	[
-		"/home/mario/sobrex"
+		"/home/mario/sobrex",
+		"/home/mario/sobrex/app",
+		"/home/mario/sobrex/app/templates/app",
+		"/home/mario/sobrex/landing_page/static",
+		"/home/mario/sobrex/landing_page/static/landing_page",
+		"/home/mario/sobrex/landing_page/templates",
+		"/home/mario/sobrex/landing_page/templates/landing_page",
+		"/home/mario/sobrex/sobrex"
 	],
 	"file_history":
 	[
+		"/home/mario/sobrex/app/templates/app/index.html",
+		"/home/mario/sobrex/landing_page/views.py",
+		"/home/mario/sobrex/landing_page/templates/landing_page/index.html",
+		"/home/mario/Documents/SB-Admin-BS4-Angular-2-master/src/client/app/dashboard/dashboard.component.html",
+		"/home/mario/Documents/SB-Admin-BS4-Angular-2-master/dist/dev/index.html",
+		"/home/mario/Documents/SB-Admin-BS4-Angular-2-master/src/client/app/dashboard/home/index.ts",
+		"/home/mario/sobrex/app/migrations/0001_initial.py",
+		"/home/mario/sobrex/application/test_models.py",
+		"/home/mario/sobrex/application/models.py",
+		"/home/mario/sobrex/sobrex.sublime-project",
+		"/home/mario/sobrex/sobrex/settings.py",
+		"/home/mario/sobrex/landing_page/static/landing_page/css/landing-page.css",
+		"/home/mario/Documents/startbootstrap-landing-page-gh-pages/index.html",
+		"/home/mario/sobrex/landing_page/urls.py",
+		"/home/mario/sobrex/sobrex/urls.py",
+		"/home/mario/Documents/intensify template/assets/css/main.css",
+		"/home/mario/Documents/intensify template/index.html",
 		"/home/mario/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
 		"/home/mario/solunova/solunova-project/solunova/dashboard/templates/default/menu.html",
 		"/home/mario/solunova/solunova-project/solunova/dashboard/urls.py",
@@ -320,15 +522,7 @@
 		"/home/mario/railsProyects/egreen.backend/db/migrate/20140402194113_create_devices.rb",
 		"/home/mario/railsProyects/egreen.backend/app/views/people/show_authenticated.json.jbuilder",
 		"/home/mario/comasur/www/index-green.html",
-		"/home/mario/railsProyects/egreen.backend/app/models/status.rb",
-		"/home/mario/railsProyects/egreen.backend/db/migrate/20160517131045_add_type_to_ad_compensations.rb",
-		"/home/mario/railsProyects/egreen.backend/config/database.yml",
-		"/home/mario/railsProyects/egreen.backend/db/migrate/20160512144145_add_info_to_devices.rb",
-		"/home/mario/railsProyects/egreen.backend/db/migrate/20160516133557_add_so_to_devices.rb",
-		"/home/mario/railsProyects/egreen.backend/config/deploy.rb",
-		"/home/mario/egreen.backend/app/controllers/application_controller.rb",
-		"/home/mario/egreen.backend/bin/rails",
-		"/home/mario/egreen_backup10_5.sql"
+		"/home/mario/railsProyects/egreen.backend/app/models/status.rb"
 	],
 	"find":
 	{
@@ -336,7 +530,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 108.0,
 		"where_history":
 		[
 		]
@@ -346,6 +540,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"'),\n",
+			"'))\n",
+			">\n",
 			"{\n",
 			"}\n",
 			"\n    url(r'^categories/add$', categories.add, name='categories_add'),",
@@ -402,52 +599,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "sobrex.sublime-project",
+					"file": "sobrex/settings.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 384,
+						"buffer_size": 3355,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								180,
-								180
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "sobrex/settings.py",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3096,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3096,
-								3096
+								1097,
+								1097
 							]
 						],
 						"settings":
@@ -457,27 +626,151 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1368.0,
+						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/home/mario/Documents/intensify template/index.html",
+					"buffer": 1,
+					"file": "app/admin.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4722,
+						"buffer_size": 127,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								126,
+								126
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1278,
+								1278
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/test_models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 592,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								409,
+								409
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/templates/app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								577,
+								577
 							]
 						],
 						"settings":
@@ -489,16 +782,117 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/templates/app/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5129,
+								5129
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2688.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 293,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								293,
+								293
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/home/mario/Documents/intensify template/assets/css/main.css",
+					"buffer": 7,
+					"file": "app/templates/app/dorder/add.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 51823,
+						"buffer_size": 4048,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4034,
+								4034
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2232.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sobrex/__init__.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 0,
 						"regions":
 						{
 						},
@@ -511,14 +905,125 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
-						"translation.x": -0.0,
-						"translation.y": 4392.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								78,
+								78
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/data_views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "sobrex/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 861,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								813,
+								813
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]

@@ -18,33 +18,38 @@ class Client(models.Model):
     name = models.CharField('Name',max_length=100)
     email = models.EmailField('email')
     phone = models.CharField('phone',max_length=20)    
+
     def __unicode__(self):
-      return self.name
+        return self.name
+    def __str__(self):
+        s = ''
+        s+= self.rut
+        s+= '   '
+        s+= self.name
+        return s
 
-
-class Adress(models.Model):
-    """
-    Description: data table for Companies
-    RelatioShip: one to one User model
-    """
-    sender = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='sender')
-    receiver = models.ForeignKey(Client,on_delete=models.CASCADE, related_name='receiver')
-
-    street = models.CharField('street', max_length=100)
+class Address(models.Model):
+    street = models.CharField('street', max_length=100,)
     number = models.CharField('number',max_length=10)
     sub_index = models.CharField('sub_index', max_length=10)
     city = models.CharField('city',max_length=20)
     zipcode = models.CharField('zipcode', max_length=20)    
+    Client = models.ForeignKey(Client,on_delete = models.CASCADE, null=True)
 
-    def __unicode__(self):
-      return self.name + " "+self.number
+    def __str__(self):
+        s = ''
+        s+= self.street
+        s+= ' '
+        s+= self.number
+        return s
 
 
 class Status(models.Model):
     name = models.CharField('name',max_length=20)
 
 class DispatchOrder(models.Model):
-
+    sender = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='sender')
+    receiver = models.ForeignKey(Client,on_delete=models.CASCADE, related_name='receiver')
     payment_charge = models.CharField('payment_charge',max_length=10)
     value = models.IntegerField('value')
     creation = models.DateTimeField('creation_date',auto_now_add=True)
