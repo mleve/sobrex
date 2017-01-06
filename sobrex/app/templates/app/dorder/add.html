@@ -1,5 +1,4 @@
-
-
+{% csrf_token %}
 <div class="panel panel-default">
   <div class="panel-heading">Seleccione Cliente</div>
   <div class="panel-body">
@@ -74,23 +73,25 @@
 	    <label >Tipo de pago</label>
 	    <div class="radio">
 		  <label>
-		    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+		    <input type="radio" name="pay_type" id="optionsRadios1" value="option1" checked>
 		    De cargo del cliente
 		  </label>
 	    </div>
 		<div class="radio">
 		  <label>
-		    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+		    <input type="radio" name="pay_type" id="optionsRadios2" value="option2">
 		    De cargo del receptor
 		  </label>
 		</div>
 	  </div>
 	  <div class="form-group">
 	  <label for="payment-amount"> Valor</label>
-	  <input type="text" class="form-control" id="payment-amount" placeholder="10000">
+	  <input type="text" class="form-control" name="value" id="payment-amount" placeholder="10000">
 	  </div>
+
   </div>
 </div>
+<button id="send-btn" class="btn btn-primary">Crear</button>
 
 <script type="text/javascript">
 	$("#client-select").click(function(){
@@ -168,5 +169,29 @@
 			});
 	};
 
+	$("#send-btn").click(function(){
+		var pick_up = $("#client-address-select").val();
+		var destination = $("#receptor-address-select").val();
+		var pay_type = $("input[name=pay_type]").val();
+		var value = $("input[name=value]").val();
+		var csrf = $("input[name=csrfmiddlewaretoken]").val();
+		$.ajax({
+                url: "data/dispatch_order",
+                method: "POST",
+                data: {"pick_up_address" : pick_up,
+                	"destination_address": destination,
+                	"payment_charge": pay_type,
+                	"value": value,
+                	"tracking_number": tracking_codes.toString(),
+                	"csrfmiddlewaretoken": csrf
+                	}
+            }).done(function(data){
+            	alert("Creado");
+            })
+            .fail(function(data){
+            	alert("error: "+data);
+            });
+
+	});
 
 </script>
