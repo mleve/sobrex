@@ -92,8 +92,15 @@
   </div>
 </div>
 <button id="send-btn" class="btn btn-primary">Crear</button>
+<p></p>
 
 <script type="text/javascript">
+
+	existing_codes = [];
+	{% for code in tracking_array %}
+    	existing_codes.push("{{ code }}");
+	{% endfor %}
+
 	$("#client-select").click(function(){
 		var client_id = $(this).val();
 		$("#receptor-select").children("[value="+client_id+"]").remove();
@@ -151,6 +158,12 @@
     		return;
 		}
 
+		if($.inArray(code, existing_codes) > -1){
+			$(this).val("")
+			alert("Codigo de seguimiento: "+code+" ya existe");
+			return;
+		}
+
     	var div = $("<div>",{"class": "alert alert-info alert-dismissible" ,
     		 "role": "alert",
     		 "style": "display: inline-block;"});
@@ -186,7 +199,7 @@
                 	"csrfmiddlewaretoken": csrf
                 	}
             }).done(function(data){
-            	alert("Creado");
+            	alert(data);
             })
             .fail(function(data){
             	alert("error: "+data);

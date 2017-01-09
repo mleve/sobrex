@@ -57,6 +57,13 @@ class DispatchOrder(models.Model):
         models.CharField(max_length=20))
     status = models.ManyToManyField(Status, through='OrderStatus')
 
+    def get_last_status(self):
+        aux = self.status.last()
+        if aux is not None:
+            return aux.name
+        else:
+            return ""
+
 
 class OrderStatus(models.Model):
     dispatch_order = models.ForeignKey(DispatchOrder, on_delete=models.CASCADE)
