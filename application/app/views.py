@@ -6,7 +6,7 @@ from app.models import Client, DispatchOrder
 
 
 def index(request):
-    orders = DispatchOrder.objects.all()
+    orders = DispatchOrder.objects.all().order_by("-pk")
     return render(request, 'app/index.html',{'orders' : orders})
 
 

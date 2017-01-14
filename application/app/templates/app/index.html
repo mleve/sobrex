@@ -21,6 +21,7 @@
 	                <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
 	                    <thead>
 	                        <tr>
+								<th>id</th>
 	                            <th>Codigos seguimiento</th>
 	                            <th>Cliente</th>
 	                            <th>Dirección entrega</th>
@@ -30,7 +31,11 @@
 	                    </thead>
 	                    <tbody>
 						{% for order in orders %}
-	                        <tr class="odd gradeX">
+	                        <tr class="
+	                        {%if order.get_last_status == 'en oficina'%}
+	                        danger
+	                        {%endif%} odd gradeX">
+								<td>{{order.pk}}</td>
 	                            <td>{{order.tracking_number}}</td>
 	                            <td>{{order.destination_address.client}}</td>
 	                            <td>{{order.destination_address}}</td>
@@ -59,7 +64,9 @@
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
-            responsive: true
+            "order": [[ 0, "desc" ]],
+            "responsive": true
+
         });
     });
     </script>

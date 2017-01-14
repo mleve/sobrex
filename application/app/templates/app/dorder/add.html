@@ -1,66 +1,265 @@
 {% csrf_token %}
+<h1>Nueva orden de despacho</h1>
 <div class="panel panel-default">
   <div class="panel-heading">Seleccione Cliente</div>
   <div class="panel-body">
-	<div class="col-xs-12 col-md-8">
-		<select name="client" class="form-control" id="client-select">
-			<option value="-1">Seleccione uno </option>
-		{%for client in clients%}
-			<option value={{client.pk}} >{{client.rut}} - {{client.name}}</option>
-		{% endfor%}
-		</select>
-	</div>
-	<div class="col-xs-12 col-md-4">
-		<button class="btn btn-success">
-			<i class="fa fa-plus-circle" aria-hidden="true"></i> 
-			Agregar
-		</button>
-	</div>
+	  <div class="row">
+		<div class="col-xs-12 col-md-8">
+			<select name="client" class="form-control" id="client-select">
+				<option value="-1">Seleccione uno </option>
+			{%for client in clients%}
+				<option value={{client.pk}} >{{client.rut}} - {{client.name}}</option>
+			{% endfor%}
+			</select>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<button class="btn btn-success show-add-form" id="client-add-btn" target="client-form-row">
+				<i class="fa fa-plus-circle" aria-hidden="true"></i>
+                <span class="content">Agregar</span>
+			</button>
+		</div>
+	  </div>
+
+	  <div class="row" id="client-form-row" style="display:none;">
+		  <br />
+		  <form class="entity-creation-form" id="client-creation-form">
+          <div class="row">
+              <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="name" class="form-control" data-index="1" id="nombre" placeholder="Su nombre">
+                    </div>
+              </div>
+              <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="phone">Telefono</label>
+                        <input type="text" name="phone" class="form-control" data-index="2" id="phone" placeholder="985485632">
+                    </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="rut">Rut</label>
+                        <input type="text" name="rut" class="form-control" id="rut" data-index="3" placeholder="175546922-8">
+                    </div>
+              </div>
+              <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" data-index="4" placeholder="ejemplo@sobrex.cl">
+                    </div>
+
+              </div>
+          </div>
+		        {% csrf_token %}
+              <input type="submit" id="create-client" class="btn btn-primary" style="margin-left: 15px;" value="crear" />
+          </form>
+	  </div>
+
   </div>
 </div>
-<div class="panel panel-default">
+<div class="panel panel-default" id="pickup-address-panel" style="display: none;">
   <div class="panel-heading">Direccion de retiro</div>
   <div class="panel-body">
-	<div>
-		<select name="client" class="form-control" id="client-address-select">
-		  <option value="1">Juan Montes - direccion</option>
-		  <option value="2">pedro pablo - direccion</option>
-		  <option value="3">Empresa 1 - direccion</option>
-		  <option value="4">Empresa 2 - direccion</option>
-		  <option value="5">Empresa 3 - direccion</option>
-		</select>
+	<div class="row">
+        <div class="col-xs-12 col-md-8">
+            <select name="client" class="form-control" id="client-address-select">
+              <option value="1">Juan Montes - direccion</option>
+              <option value="2">pedro pablo - direccion</option>
+              <option value="3">Empresa 1 - direccion</option>
+              <option value="4">Empresa 2 - direccion</option>
+              <option value="5">Empresa 3 - direccion</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <button class="btn btn-success show-add-form" id="client-address-add-btn" target="client-address-form-row">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                Agregar
+            </button>
+        </div>
 	</div>
-  </div>
-</div>
-<div class="panel panel-default">
-  <div class="panel-heading">Seleccione receptor</div>
-  <div class="panel-body">
-	<div>
-		<select name="client" id="receptor-select" class="form-control">
-			<option value="-1">Seleccione uno </option>
-			{%for client in clients%}
-				<option value={{client.pk}} >{{client.name}}</option>
-			{% endfor%}
-		</select>
-	</div>
-  </div>
-</div>
-<div class="panel panel-default">
-  <div class="panel-heading">Seleccione dirección de despacho</div>
-  <div class="panel-body">
-	<div>
-		<select name="client" id="receptor-address-select" class="form-control">
-		  <option value="1">Juan Montes - direccion</option>
-		  <option value="2">pedro pablo - direccion</option>
-		  <option value="3">Empresa 1 - direccion</option>
-		  <option value="4">Empresa 2 - direccion</option>
-		  <option value="5">Empresa 3 - direccion</option>
-		</select>
-	</div>
+      <div class="row" id="client-address-form-row" style="display:none;">
+		  <br />
+		  <form class="entity-creation-form" id="client-address-creation-form">
+              <div class="row">
+                  <div class="col-md-7">
+                        <div class="form-group">
+                            <label for="street">Calle</label>
+                            <input type="text" name="street" class="form-control"
+                                   id="street" placeholder="calle" data-index="1">
+                        </div>
+
+                  </div>
+                  <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="number">N°</label>
+                            <input type="text" name="number" class="form-control"
+                                   id="number" placeholder="12252" data-index="2">
+                        </div>
+                  </div>
+                  <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="sub_index">Dpto o oficina</label>
+                            <input type="text" name="sub_index" class="form-control"
+                                   id="sub_index" placeholder="302" data-index="3">
+                        </div>
+
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-6">
+                        <div class="form-group">
+                            <label for="city">Ciudad</label>
+                            <input type="text" name="city" class="form-control" id="city" placeholder="Concepcion">
+                        </div>
+                  </div>
+                  <div class="col-xs-6">
+                      <div class="form-group">
+                            <label for="zipcode">Código postal</label>
+                            <input type="text" name="zipcode" class="form-control" id="zipcode" placeholder="código postal">
+                      </div>
+                  </div>
+              </div>
+              <input type="hidden" id="client-address-form-id" name="client_id" value="" />
+              {% csrf_token %}
+              <input type="submit" id="create-client-address" class="btn btn-primary" style="margin-left: 15px;" value="crear" />
+          </form>
+	  </div>
   </div>
 </div>
 
-<div class="panel panel-default">
+<div class="panel panel-default" id="receptor-panel" style="display: none;">
+  <div class="panel-heading">Seleccione Cliente</div>
+  <div class="panel-body">
+	  <div class="row">
+		<div class="col-xs-12 col-md-8">
+			<select name="client" class="form-control" id="receptor-select">
+				<option value="-1">Seleccione uno </option>
+			{%for client in clients%}
+				<option value={{client.pk}} >{{client.rut}} - {{client.name}}</option>
+			{% endfor%}
+			</select>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<button class="btn btn-success show-add-form" id="receptor-add-btn" target="receptor-form-row">
+				<i class="fa fa-plus-circle" aria-hidden="true"></i>
+                <span class="content">Agregar</span>
+			</button>
+		</div>
+	  </div>
+
+	  <div class="row" id="receptor-form-row" style="display:none;">
+		  <br />
+		  <form class="entity-creation-form" id="receptor-creation-form">
+          <div class="row">
+              <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="name" class="form-control" data-index="1" id="nombre" placeholder="Su nombre">
+                    </div>
+              </div>
+              <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="phone">Telefono</label>
+                        <input type="text" name="phone" class="form-control" data-index="2" id="phone" placeholder="985485632">
+                    </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="rut">Rut</label>
+                        <input type="text" name="rut" class="form-control" id="rut" data-index="3" placeholder="175546922-8">
+                    </div>
+              </div>
+              <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" data-index="4" placeholder="ejemplo@sobrex.cl">
+                    </div>
+
+              </div>
+          </div>
+		        {% csrf_token %}
+              <input type="submit" class="btn btn-primary" style="margin-left: 15px;" value="crear" />
+          </form>
+	  </div>
+
+  </div>
+</div>
+
+<div class="panel panel-default" id="receptor-address-panel" style="display: none;">
+  <div class="panel-heading">Direccion de retiro</div>
+  <div class="panel-body">
+	<div class="row">
+        <div class="col-xs-12 col-md-8">
+            <select name="client" class="form-control" id="receptor-address-select">
+              <option value="1">Juan Montes - direccion</option>
+              <option value="2">pedro pablo - direccion</option>
+              <option value="3">Empresa 1 - direccion</option>
+              <option value="4">Empresa 2 - direccion</option>
+              <option value="5">Empresa 3 - direccion</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <button class="btn btn-success show-add-form" id="receptor-address-add-btn" target="receptor-address-form-row">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                Agregar
+            </button>
+        </div>
+	</div>
+      <div class="row" id="receptor-address-form-row" style="display:none;">
+		  <br />
+		  <form class="entity-creation-form" id="receptor-address-creation-form">
+              <div class="row">
+                  <div class="col-md-7">
+                        <div class="form-group">
+                            <label for="street">Calle</label>
+                            <input type="text" name="street" class="form-control"
+                                   id="street" placeholder="calle" data-index="1">
+                        </div>
+
+                  </div>
+                  <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="number">N°</label>
+                            <input type="text" name="number" class="form-control"
+                                   id="number" placeholder="12252" data-index="2">
+                        </div>
+                  </div>
+                  <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="sub_index">Dpto o oficina</label>
+                            <input type="text" name="sub_index" class="form-control"
+                                   id="sub_index" placeholder="302" data-index="3">
+                        </div>
+
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-6">
+                        <div class="form-group">
+                            <label for="city">Ciudad</label>
+                            <input type="text" name="city" class="form-control" id="city" placeholder="Concepcion">
+                        </div>
+                  </div>
+                  <div class="col-xs-6">
+                      <div class="form-group">
+                            <label for="zipcode">Código postal</label>
+                            <input type="text" name="zipcode" class="form-control" id="zipcode" placeholder="código postal">
+                      </div>
+                  </div>
+              </div>
+              <input type="hidden" id="receptor-address-form-id" name="client_id" value="" />
+              {% csrf_token %}
+              <input type="submit" class="btn btn-primary" style="margin-left: 15px;" value="crear" />
+          </form>
+	  </div>
+  </div>
+</div>
+
+<div class="panel panel-default" id="dispatch-order-panel" style="display:none;">
   <div class="panel-heading">Datos orden de despacho: </div>
   <div class="panel-body">
 	  <div class="form-group">
@@ -73,13 +272,13 @@
 	    <label >Tipo de pago</label>
 	    <div class="radio">
 		  <label>
-		    <input type="radio" name="pay_type" id="optionsRadios1" value="option1" checked>
+		    <input type="radio" name="pay_type" id="optionsRadios1" value="cliente" checked>
 		    De cargo del cliente
 		  </label>
 	    </div>
 		<div class="radio">
 		  <label>
-		    <input type="radio" name="pay_type" id="optionsRadios2" value="option2">
+		    <input type="radio" name="pay_type" id="optionsRadios2" value="receptor">
 		    De cargo del receptor
 		  </label>
 		</div>
@@ -90,9 +289,9 @@
 	  </div>
 
   </div>
-</div>
+
 <button id="send-btn" class="btn btn-primary">Crear</button>
-<p></p>
+</div>
 
 <script type="text/javascript">
 
@@ -101,7 +300,7 @@
     	existing_codes.push("{{ code }}");
 	{% endfor %}
 
-	$("#client-select").click(function(){
+	$("#client-select").change(function(){
 		var client_id = $(this).val();
 		$("#receptor-select").children("[value="+client_id+"]").remove();
         $.ajax({
@@ -114,12 +313,16 @@
             		"<option value=\"-1\" >Seleccione una </option>");
             	for(i in addresses){
             		$("#client-address-select").append(
-            			"<option value=\""+addresses[i].pk+"\" >"+addresses[i].fields.street+"</option>");
+            			"<option value=\""+addresses[i].pk+"\" >"+
+            			addresses[i].fields.street+" "+addresses[i].fields.number+
+            			"</option>");
             	}
                 console.log(data);
+                $("#pickup-address-panel").fadeIn("slow",function(){});
+                $("#client-address-form-id").val(client_id);
             });
 	});
-	$("#receptor-select").click(function(){
+	$("#receptor-select").change(function(){
 		var receptor_id = $(this).val();
         $.ajax({
                 url: "data/address",
@@ -131,10 +334,21 @@
             		"<option value=\"-1\" >Seleccione una </option>");
             	for(i in addresses){
             		$("#receptor-address-select").append(
-            			"<option value=\""+addresses[i].pk+"\" >"+addresses[i].fields.street+"</option>");
+            			"<option value=\""+addresses[i].pk+"\" >"+
+            			addresses[i].fields.street+" "+addresses[i].fields.number+
+            			"</option>");
             	}
                 console.log(data);
+                $("#receptor-address-panel").fadeIn("slow",function(){});
+                $("#receptor-address-form-id").val(receptor_id);
             });
+	});
+
+    $("#client-address-select").change(function(){
+            $("#receptor-panel").fadeIn("slow",function(){});
+	});
+	$("#receptor-address-select").change(function(){
+            $("#dispatch-order-panel").fadeIn("slow",function(){});
 	});
 
 
@@ -199,12 +413,77 @@
                 	"csrfmiddlewaretoken": csrf
                 	}
             }).done(function(data){
-            	alert(data);
+            	location.reload();
             })
             .fail(function(data){
             	alert("error: "+data);
             });
 
 	});
+
+	$(".show-add-form").click(function(){
+	    var target = $(this).attr("target");
+	    $( "#"+target ).toggle();
+	});
+
+
+
+    function get_entity_parameters(id){
+        if(id === "client-creation-form"){
+            return {
+                "url" : "{%url 'data_create_client' %}",
+                "select" : "#client-select",
+                "form" : "#client-form-row"
+            }
+        }
+        else if(id == "client-address-creation-form"){
+            return {
+                "url" : "{%url 'data_create_client_address' %}",
+                "select" : "#client-address-select",
+                "form" : "#client-address-form-row"
+            }
+        }
+         else if(id === "receptor-creation-form"){
+            return {
+                "url" : "{%url 'data_create_client' %}",
+                "select" : "#receptor-select",
+                "form" : "#receptor-form-row"
+            }
+        }
+        else if(id == "receptor-address-creation-form"){
+            return {
+                "url" : "{%url 'data_create_client_address' %}",
+                "select" : "#receptor-address-select",
+                "form" : "#receptor-address-form-row"
+            }
+        }
+    }
+
+	$(".entity-creation-form" ).on( "submit", function( event ) {
+        event.preventDefault();
+        var params = get_entity_parameters($(this).attr("id"));
+
+        console.log( $( this ).serialize() );
+        var form_serialized = $( this ).serialize();
+		$.ajax({
+                url: params.url,
+                method: "POST",
+                data: form_serialized
+            }).done(function(data){
+            	//alert(data);
+            	$(params.select).children().removeAttr("selected");
+            	$(params.select).append(
+            	    '<option value="'+data.id+'" selected >'+data.display+'</option>');
+            	$(params.form).fadeOut("fast",function(){});
+            	$(params.select).trigger( "change" );
+
+            })
+            .fail(function(data){
+            	alert("error: "+data);
+            });
+    });
+
+
+
 
 </script>

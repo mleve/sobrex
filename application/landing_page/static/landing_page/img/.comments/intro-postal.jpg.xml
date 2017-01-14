@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comment version="3.0">
+  <caption>Postman delivering mail</caption>
+  <note>---</note>
+  <place/>
+  <categories>
+    <category value="1"/>
+    <category value="Adults"/>
+    <category value="Assistance"/>
+    <category value="Carrying"/>
+    <category value="Convenience"/>
+    <category value="Delivering"/>
+    <category value="Holding"/>
+    <category value="Indoors"/>
+    <category value="Males"/>
+    <category value="Men"/>
+    <category value="Multi-racial"/>
+    <category value="Occupations and work"/>
+    <category value="People"/>
+    <category value="White"/>
+    <category value="Working"/>
+    <category value="Young adult man"/>
+    <category value="Young adults"/>
+  </categories>
+</comment>
