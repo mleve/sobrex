@@ -5,6 +5,9 @@ from . import data_views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^login_user/$', views.to_login, name='to_login'),
+    url(r'^logout/$', views.logout_view, name='logout_view'),
+    url(r'^logs_in/$', views.logs_in, name='login_user'),
     url(r'^dorder/add$', views.dorder_add, name='dorder_add'),
     url(r'^data/address$', data_views.address, name='data_address'),
     url(r'^data/dispatch_order$', data_views.dispatch_order, name='data_dispatch_order'),
