@@ -1,5 +1,5 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -77,12 +77,12 @@
                             <div class="col-sm-6">
                                     <h3>Siga su encargo</h3>
                                     <div class="row">
-                                        <form>
+                                        <form id="search-by-tracking-code">
                                         <div class="col-xs-9">
-                                            <input type="text" class="form-control" id="usr" placeholder="Codigo de seguimiento" />
+                                            <input type="text" class="form-control" name="tracking_number" placeholder="Codigo de seguimiento" />
                                         </div>
                                         <div class="col-xs-3">
-                                            <button type="submit" class="btn btn-default" href="/" role="button">Buscar</button>
+                                            <button id="search-button" type="submit" class="btn btn-default" role="button">Buscar</button>
                                         </div>
                                         </form>
                                     </div>
@@ -90,7 +90,26 @@
                             </div>
                             <div class="col-sm-3 col-xs-0"></div>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-0"></div>
+                            <div class="col-sm-6" id="results-div" style="background-color: rgba(0, 0, 0, 0.5);
+                             margin-top: 20px; display:none;">
+                                <div id="result-found" style="display:none;">
+                                    <h3>Su envío:</h3>
+                                    <p> Destinatario: <strong id="result_receiver"></strong></p>
+                                    <p> Dirección de envio: <strong id="result_receiver_address"></strong></p>
+                                    <p> Estado: <strong id="result_status"></strong></p>
+                                </div>
+                                <div id="result-not-found" style="display:none;">
+                                    <h3>No se encontraron ordenes con ese codigo de seguimiento</h3>
+                                </div>
+
+
+                            </div>
+                            <div class="col-sm-3 col-xs-0"></div>
+                        </div>
                     </div>
+
 
                 </div>
             </div>
@@ -280,6 +299,39 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static 'landing_page/js/bootstrap.min.js'%}"></script>
+
+    <script type="text/javascript">
+        $("#search-by-tracking-code").submit(function(){
+            event.preventDefault();
+            id = $(this).find("input").val();
+            $("#search-button").attr("disabled","disabled");
+            $("#search-button").html("buscando...");
+            $("#result-found").hide();
+            $("#result-not-found").hide();
+            $.ajax({
+                    url: "/dashboard/data/dispatch_order/"+id+"/",
+                    method: "GET"
+                }).done(function(data){
+                    if($.isEmptyObject(data)){
+                        $("#result-not-found").show();
+                    }
+                    else{
+                        $("#result_receiver").html(data.receiver);
+                        $("#result_receiver_address").html(data.receiver_address);
+                        $("#result_status").html(data.status);
+                        $("#result-found").show();
+
+                    }
+                    $("#search-button").removeAttr("disabled");
+                    $("#search-button").html("Buscar otro");
+                    $("#results-div").css("display","");
+                })
+                .fail(function(data){
+                console.log(data)
+                });
+
+        });
+    </script>
 
 
 </body>

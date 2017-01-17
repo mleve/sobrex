@@ -1,4 +1,4 @@
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, ObjectDoesNotExist, MultipleObjectsReturned
 from django.http import HttpResponse
 from django.shortcuts import render
 from app.models import Client, Address, DispatchOrder, OrderStatus, Status
@@ -14,6 +14,25 @@ def address(request):
         addresses = Address.objects.all()
     response = serializers.serialize("json", addresses)
     return JsonResponse(response, safe=False)
+
+
+def search_order(request, tracking_number):
+    query = [tracking_number]
+    try:
+        result = DispatchOrder.objects.get(tracking_number__contains=query)
+    except:
+        result = False
+    response = {}
+    if result:
+        receiver = result.destination_address.client.name
+        receiver_address = result.destination_address.street
+        receiver_address = receiver_address + " " + result.destination_address.number
+        receiver_address = receiver_address + " , " + result.destination_address.city
+        status = result.get_last_status()
+        response = {"receiver": receiver,
+                    "receiver_address": receiver_address,
+                    "status": status}
+    return JsonResponse(response)
 
 
 def dispatch_order(request):
