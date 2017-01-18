@@ -1,6 +1,8 @@
 from django.core.exceptions import ValidationError, ObjectDoesNotExist, MultipleObjectsReturned
 from django.http import HttpResponse
 from django.shortcuts import render
+
+from app.mail import send_email
 from app.models import Client, Address, DispatchOrder, OrderStatus, Status
 from django.http import JsonResponse
 from django.core import serializers
@@ -115,3 +117,16 @@ def create_client_address(request):
         return JsonResponse({'id': new_address.pk, 'display': display})
     except ValidationError as e:
         return JsonResponse(e, status=400)
+
+
+def contact(request):
+    to = ['juancarlos@sobrex.cl', 'mleve@ug.uchile.cl']
+    subject = 'Nuevo contacto en sobrex.cl'
+    body = 'Hola, el usuario: ' + request.GET.get('name', '') + ' Envia el siguiente mensaje: \n'
+    body = body + request.GET.get('message', '') + '\n'
+    body = body + 'Responder a ' + request.GET.get('email')
+    response = send_email(body, subject, to)
+    if response == 1:
+        return HttpResponse('', status=200)
+    else:
+        return HttpResponse('', status=400)

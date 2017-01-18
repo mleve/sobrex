@@ -131,3 +131,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_URL = '/dashboard/login_user/'
 LOGOUT_URL = '/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'contacto@sobrex.cl'
+EMAIL_HOST_PASSWORD = 'DUudeSONdk6KV9zs'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "contacto@sobrex.cl"
