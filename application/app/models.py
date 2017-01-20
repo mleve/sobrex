@@ -61,7 +61,7 @@ class DispatchOrder(models.Model):
     status = models.ManyToManyField(Status, through='OrderStatus')
 
     def get_last_status(self):
-        aux = self.status.last()
+        aux = self.status.first()
         if aux is not None:
             return aux.name
         else:
