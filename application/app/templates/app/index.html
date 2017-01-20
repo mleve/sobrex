@@ -1,6 +1,7 @@
 {% extends "app/base.html" %}
 {% load static %}
 {% block main_content %}
+{% csrf_token %}
 <div class="row">
 	    <div class="col-lg-12">
 	        <div class="panel panel-default">
@@ -34,12 +35,23 @@
 	                        <tr class="
 	                        {%if order.get_last_status == 'en oficina'%}
 	                        danger
-	                        {%endif%} odd gradeX">
+	                        {% elif order.get_last_status == 'entregado' %}
+	                        success
+	                        {%endif%} " id="row-{{order.pk}}">
 								<td>{{order.pk}}</td>
 	                            <td>{{order.tracking_number}}</td>
 	                            <td>{{order.destination_address.client}}</td>
 	                            <td>{{order.destination_address}}</td>
-	                            <td>{{order.get_last_status}}</td>
+								<td><select class="form-control changeStatus" pk="{{order.pk}}" >
+								{% for status in statuses %}
+								<option value="{{status.name}}"
+										{% if status.name == order.get_last_status %}
+											selected
+										{% endif%}
+										>{{status.name}}
+								</option>
+								{% endfor %}
+								</select></td>
 	                            <td class="center">X</td>
 	                        </tr>
 						{% endfor%}
@@ -68,6 +80,27 @@
             "responsive": true
 
         });
+    });
+
+    $(".changeStatus").change(function(){
+    	var select = $(this);
+    	var pk = $(this).attr("pk");
+    	var newStatus = $(this).val();
+    	var csrf = $("input[name=csrfmiddlewaretoken]").val();
+		$.ajax({
+                url: "data/dispatch_order/"+pk+"/status/",
+                data: {"new_status" : newStatus, "csrfmiddlewaretoken": csrf},
+                method: "post"
+		}).done(function(){
+			select.children().removeAttr("selected");
+			select.children("input[value='"+newStatus+"']").attr("selected","selected");
+			$("#row-"+pk).removeClass();
+			if(newStatus === "en oficina")
+				$("#row-"+pk).addClass("danger");
+			else if(newStatus === "entregado")
+				$("#row-"+pk).addClass("success");
+
+		});
     });
     </script>
 

@@ -5,12 +5,15 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template import RequestContext
 
-from app.models import Client, DispatchOrder
+from app.models import Client, DispatchOrder, Status
+
 
 @login_required
 def index(request):
     orders = DispatchOrder.objects.all().order_by("-pk")
-    return render(request, 'app/index.html',{'orders' : orders})
+    statuses = Status.objects.all()
+    return render(request, 'app/index.html', {'orders': orders,
+                                              'statuses': statuses})
 
 
 @login_required

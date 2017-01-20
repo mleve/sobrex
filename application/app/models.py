@@ -46,6 +46,9 @@ class Address(models.Model):
 class Status(models.Model):
     name = models.CharField('name',max_length=20)
 
+    def __str__(self):
+        return self.name
+
 
 class DispatchOrder(models.Model):
     pick_up_address = models.ForeignKey(Address, on_delete=models.CASCADE, related_name='pick_up')

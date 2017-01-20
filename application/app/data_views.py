@@ -130,3 +130,11 @@ def contact(request):
         return HttpResponse('', status=200)
     else:
         return HttpResponse('', status=400)
+
+
+def update_status(request, pk):
+    order = DispatchOrder.objects.get(pk=pk)
+    new_status_name = request.POST.get("new_status")
+    new_status = Status.objects.get(name=new_status_name)
+    created = OrderStatus.objects.create(dispatch_order=order, status=new_status)
+    return HttpResponse(created.pk, status=201)

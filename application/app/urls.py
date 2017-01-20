@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^dorder/add$', views.dorder_add, name='dorder_add'),
     url(r'^data/address$', data_views.address, name='data_address'),
     url(r'^data/send_email$', data_views.contact, name='data_send_email'),
+    url(r'^data/dispatch_order/(?P<pk>.*)/status/$', data_views.update_status, name='data_update_status'),
     url(r'^data/dispatch_order/(?P<tracking_number>.*)/$', data_views.search_order, name='data_search_order'),
     url(r'^data/dispatch_order$', data_views.dispatch_order, name='data_dispatch_order'),
     url(r'^data/create_client$', data_views.create_client, name='data_create_client'),
