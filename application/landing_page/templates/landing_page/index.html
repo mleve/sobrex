@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Landing Page - Start Bootstrap Theme</title>
+    <title>Sobrex Ltda - Su envío es importante</title>
 
     <link rel="shortcut icon" href="{% static 'landing_page/img/favicon.ico'%}" type="image/x-icon">
     <link rel="icon" href="{% static 'landing_page/img/favicon.ico'%}" type="image/x-icon">
@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#"><img style="width:33px;height:33px;" src="{%static 'landing_page/img/logo_color.png'%}" /></a>
+                <a class="navbar-brand topnav" href="#"><img style="width:40px;height:30px;" src="{%static 'landing_page/img/logo_color.png'%}" /></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -69,17 +69,26 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Sobrex ltda</h1>
-                        <h3>Su envío es lo mas importante</h3>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-3">
+                                <img style="width:200px;height:150px;" src="{%static 'landing_page/img/logo_color.png'%}" />
+                            </div>
+                            <div class="col-md-3">
+                                <h1>Sobrex ltda</h1>
+                                <h3>Su envío es importante</h3>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
                         <hr class="intro-divider">
                         <div class="row">
                             <div class="col-sm-3 col-xs-0"></div>
                             <div class="col-sm-6">
-                                    <h3>Siga su encargo</h3>
+                                    <h3>Siga su envío</h3>
                                     <div class="row">
                                         <form id="search-by-tracking-code">
                                         <div class="col-xs-9">
-                                            <input type="text" class="form-control" name="tracking_number" placeholder="Codigo de seguimiento" />
+                                            <input type="text" class="form-control" name="tracking_number" placeholder="Ingrese orden de envío" />
                                         </div>
                                         <div class="col-xs-3">
                                             <button id="search-button" type="submit" class="btn btn-default" role="button">Buscar</button>
@@ -101,7 +110,7 @@
                                     <p> Estado: <strong id="result_status"></strong></p>
                                 </div>
                                 <div id="result-not-found" style="display:none;">
-                                    <h3>No se encontraron ordenes con ese codigo de seguimiento</h3>
+                                    <h3>No se encontraron ordenes con ese código</h3>
                                 </div>
 
 
@@ -142,7 +151,7 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <h3>Visión</h3>
-                    <p class="lead"> Crecer en el negocio de los envíos a nivel nacional con responsabilidad y profesionalismo que nos permita competir con lealtad, para asegurar la confianza de nuestros clientes y trabajadores.</p>
+                    <p class="lead"> Crecer en el negocio de los envíos a nivel nacional con responsabilidad y profesionalismo que nos permita competir con lealtad, asegurando la confianza de nuestros clientes y trabajadores.</p>
                 </div>
             </div>
 
@@ -174,7 +183,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-3"><i class="fa fa-suitcase fa-5x" aria-hidden="true"></i></div>
-                        <div class="col-md-3"><p class="lead" style="margin-top: 20px;">Maletas</p></div>
+                        <div class="col-md-3"><p class="lead" style="margin-top: 20px;">Valijas</p></div>
                         <div class="col-md-6 col-xs-0"></div>
                     </div>
                 </div>
@@ -213,7 +222,7 @@
             <div class="row">
                 <div class="col-xs-0 col-sm-4"></div>
                 <div class="col-xs-0 col-sm-4">
-                    <h2>Estemos en contacto</h2>
+                    <h2>Contactenos</h2>
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                 </div>
@@ -221,8 +230,7 @@
 
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
-                    <h3>Estamos operando en Concepción!</h3>
-                    <p class="lead">Llene el formulario y lo contactaremos en menos de 24 hrs</p>
+                    <p class="lead">Ingrese su requerimiento u opinión y lo contactaremos</p>
                 </div>
                 <div id="contact-form-div" class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <form id="contact-form">
@@ -256,7 +264,7 @@
                 <div class="col-md-6">
                     <h2>Sobrex Ltda</h2>
                     <p class="lead">Dirección: <strong>  Padre Hurtado 426, OF. 111,  Concepción</strong></p>
-                    <p class="lead">Email: <strong> juancarlos@sobrex.cl</strong></p>
+                    <p class="lead">Email: <strong> contacto@sobrex.cl</strong></p>
                     <p class="lead">Telefono: <strong>985166487</strong></p>
                 </div>
                 <div class="col-md-6">
@@ -284,7 +292,7 @@
                             <a href="/dashboard">Administración</a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted small">Todos los derechos reverados</p>
+                    <p class="copyright text-muted small">Todos los derechos reservados</p>
                     <p class="copyright text-muted small">Desarrollado por <a href="https://cl.linkedin.com/in/mario-leverone-0673b694" title="Mario Leverone" target="_blank">Mario Leverone</a></p>
                 </div>
             </div>
